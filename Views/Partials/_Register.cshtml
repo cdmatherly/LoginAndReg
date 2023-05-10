@@ -1,0 +1,36 @@
+@model User
+
+<form asp-action="CreateUser" asp-controller="User">
+    <p class="h1 text-center mb-3">Register</p>
+    <span asp-validation-for="FirstName" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label asp-for="FirstName" class="form-label col-3"></label>
+        <input type="text"
+        class="form-control" asp-for="FirstName">
+    </div>
+    <span asp-validation-for="LastName" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label asp-for="LastName" class="form-label col-3"></label>
+        <input type="text"
+        class="form-control" asp-for="LastName">
+    </div>
+    <span asp-validation-for="Email" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label asp-for="Email" class="form-label col-3"></label>
+        <input type="text"
+        class="form-control" asp-for="Email">
+    </div>
+    <span asp-validation-for="Password" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label asp-for="Password" class="form-label col-3"></label>
+        <input
+        class="form-control" asp-for="Password">
+    </div>
+    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+    <div class="mb-3 d-flex justify-content-between align-items-center">
+        <label asp-for="ConfirmPassword" class="form-label col-3"></label>
+        <input
+        class="form-control" asp-for="ConfirmPassword">
+    </div>
+    <input class="btn btn-primary" type="submit" value="Register">
+</form>
